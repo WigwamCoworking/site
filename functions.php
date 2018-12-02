@@ -3017,4 +3017,25 @@ endif;
 
 //
 header( "X-XSS-Protection: 0" );
+
+// slack automated
+add_action( 'user_register', 'slackAddNewMember', 10, 1 );
+
+function slackAddNewMember( $user_id ) {
+	
+	$slackApiUrl = 'https://slack.com/api/users.admin.invite?token=';
+	$email = get_userdata($user_id)->user_email;
+
+	// Use curl to send your message
+	$c = curl_init($slackApiUrl.SLACK_TOKEN."&email=".$email);
+	curl_setopt($c, CURLOPT_SSL_VERIFYPEER, false);
+	curl_setopt($c, CURLOPT_POST, true);
+	curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
+	curl_exec($c);
+	curl_close($c);
+    
+	// check result
+	
+	// log it
+}
 ?>
