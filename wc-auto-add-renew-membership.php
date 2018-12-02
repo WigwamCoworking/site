@@ -33,6 +33,7 @@ function add_membership_on_adding_product_to_cart ( $cart_key, $product_id, $qua
 	$current_plan_slug = 'adhesion-2018';
 	$found = false;
 	
+	
 	// bail if Memberships isn't active
 	if ( ! function_exists( 'wc_memberships' ) ) {
 		return;
