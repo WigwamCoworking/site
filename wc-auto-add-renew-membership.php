@@ -32,7 +32,8 @@ function add_membership_on_adding_product_to_cart ( $cart_key, $product_id, $qua
 	$membership_product_id = 226; 
 	$current_plan_slug = 'adhesion-2018';
 	$found = false;
-	
+	// Chamie
+	$oldPlanSlug = 'adherent-2018';
 	
 	// bail if Memberships isn't active
 	if ( ! function_exists( 'wc_memberships' ) ) {
@@ -41,7 +42,8 @@ function add_membership_on_adding_product_to_cart ( $cart_key, $product_id, $qua
 	
 	$user_id = get_current_user_id();
 	// If the user is not yet a member, add the membership product to cart, unless it's already there
-	if ( ! wc_memberships_is_user_active_member( $user_id, $current_plan_slug ) ) {
+	if ( ! wc_memberships_is_user_active_member( $user_id, $current_plan_slug ) ||
+		! wc_memberships_is_user_active_member( $user_id, $oldPlanSlug ) ) {
 	//check if product already in cart
 		if ( sizeof( WC()->cart->get_cart() ) > 0 ) {
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $values ) {
