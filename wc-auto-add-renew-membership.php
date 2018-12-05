@@ -33,6 +33,10 @@ function add_membership_on_adding_product_to_cart ( $cart_key, $product_id, $qua
 	$current_plan_slug = 'adhesion-2019';
 	$found = false;
 	
+		// Chamie we don't ask during december for 2018 members
+	$oldPlanSlug = 'adherent-2018';
+	$oldPlanSlug2 = 'adhesion-2018';
+	
 	// bail if Memberships isn't active
 	if ( ! function_exists( 'wc_memberships' ) ) {
 		return;
@@ -40,7 +44,9 @@ function add_membership_on_adding_product_to_cart ( $cart_key, $product_id, $qua
 	
 	$user_id = get_current_user_id();
 	// If the user is not yet a member, add the membership product to cart, unless it's already there
-	if ( ! wc_memberships_is_user_active_member( $user_id, $current_plan_slug ) ) {
+	if ( ! wc_memberships_is_user_active_member( $user_id, $current_plan_slug ) &&
+		! wc_memberships_is_user_active_member( $user_id, $oldPlanSlug ) &&
+		! wc_memberships_is_user_active_member( $user_id, $oldPlanSlug2 ) ) {
 	//check if product already in cart
 		if ( sizeof( WC()->cart->get_cart() ) > 0 ) {
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $values ) {
