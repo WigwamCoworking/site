@@ -1,0 +1,17 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-coworking-blocks-choose-plan {
+	background-color: #F3F3F4;
+	color: #333;
+	text-align: center;
+	font-size: 13px !important;
+	padding: 2em 1em !important;
+}
+
+.wp-block-coworking-blocks-choose-plan p {
+
+}

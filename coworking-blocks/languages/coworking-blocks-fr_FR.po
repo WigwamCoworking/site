@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WigWam Blocs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-31 17:32+0100\n"
+"PO-Revision-Date: 2019-01-31 17:34+0100\n"
+"Language-Team: Rémi Corson\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n;esc_attr__;esc_attr_e;esc_html__;esc_html_e;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 2.2.1\n"
+"Last-Translator: \n"
+"Language: fr_FR\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: blocks/choose-plan.php:104
+msgid "Mandatory Membership"
+msgstr "Adhésion Obligatoire"
+
+#: blocks/choose-plan.php:127
+msgid "The membership for next year will be for sale in September."
+msgstr "L’adhésion pour l’année prochaine sera en vente à partir du mois de Septembre."
+
+#: blocks/choose-plan.php:133
+msgid "Day Tickets"
+msgstr "Tickets Journée"
+
+#: blocks/choose-plan.php:135
+msgid "ticket-journee"
+msgstr "ticket-journee"
+
+#: blocks/choose-plan.php:146
+msgid "Choose Your Plan"
+msgstr "Choisir Votre Plan"
+
+#: blocks/choose-plan.php:169
+msgid "The plan price will be self adjusted upon products selection."
+msgstr "Le prix du plan sera ajusté automatiquement en fonction de votre sélection."
+
+#: blocks/choose-plan.php:174
+msgid "coworking-plan"
+msgstr "coworking-plan"
+
+#: blocks/choose-plan.php:179
+msgid "Add to cart"
+msgstr "Ajouter au panier"
+
+#: blocks/choose-plan/index.js:18
+msgid "Choose Plan"
+msgstr "Choisir le plan"
+
+#: coworking-blocks.php:81
+msgid "WigWam: Qui est à jour ?"
+msgstr "Wigwam: qui est à jour ?"
